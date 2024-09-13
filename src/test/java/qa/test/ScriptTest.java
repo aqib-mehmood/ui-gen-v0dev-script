@@ -34,10 +34,10 @@ public class ScriptTest extends ScriptBase {
 
 		// Step#01 - Copy single prompt to a description file
 
-		// Path to your input file
+		// Path to your input file - prompt dataset - should be text file
 		String inputFilePath = "D:\\ScriptTesting\\prompts_dataset.txt";
 
-		// path to the folder inside that you want to save the 1-100 folders
+		// path to the folder inside that you want to save the 1-100 folders and respective files
 		String folderPath = "D:\\ScriptTesting\\Ui_components";
 
 		try {
@@ -72,7 +72,7 @@ public class ScriptTest extends ScriptBase {
 //				initialization();
 
 				// validate the page title;
-				softassert.assertEquals("v0 by Vercel", driver.getTitle(), "Title matched");
+				softassert.assertEquals("v0 by Vercel", driver.getTitle());
 				System.out.println("Checking the title of the page");
 
 				// Step#03 - Enter the current lineContent and wait for UI generation output
@@ -139,17 +139,16 @@ public class ScriptTest extends ScriptBase {
 						.click();
 				System.out.println("B Output: Clicked the B iframe");
 				Thread.sleep(2000);
-				
-				
+
 				// checking if error occurred then reload the page
 				WebElement error_msg = driver.findElement(By.id("error"));
 				if (error_msg.isDisplayed()) {
 					System.out.println("Error detected. Reloadin the page.");
-					
+
 					// Reload the page
 					driver.navigate().refresh();
 					Thread.sleep(5000);
-					
+
 					// click the B Output card
 					driver.findElement(
 							By.xpath("/html/body/div[2]/main/div/div/div[1]/div[1]/div[2]/div/div[2]/div[2]")).click();
@@ -217,19 +216,19 @@ public class ScriptTest extends ScriptBase {
 						.click();
 				System.out.println("C Output: Clicked the C iframe");
 				Thread.sleep(2000);
-				
+
 				// checking if error occurred then reload the page
 				WebElement error_msg1 = driver.findElement(By.id("error"));
 				if (error_msg1.isDisplayed()) {
 					System.out.println("Error detected. Reloadin the page.");
-					
+
 					// Reload the page
 					driver.navigate().refresh();
 					Thread.sleep(5000);
-					
+
 					// click the C Output card
-					driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div[1]/div[1]/div[2]/div/div[2]/div[3]"))
-							.click();
+					driver.findElement(
+							By.xpath("/html/body/div[2]/main/div/div/div[1]/div[1]/div[2]/div/div[2]/div[3]")).click();
 					System.out.println("Again Clicked the C iframe");
 				}
 

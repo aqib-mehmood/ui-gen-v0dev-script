@@ -22,8 +22,7 @@ public class ScriptBase {
 	public void initialization() throws InterruptedException {
 		ChromeOptions options = new ChromeOptions();
 
-		// Adding the below code to kill the currently running chrome processes
-		// Specify the name of the process to search for (e.g., "chrome.exe").
+		// IMPORTANT!!! The below code will kill the currently running chrome processes
 		String processNameToKill = "chrome.exe";
 		try {
 			// Create a process to execute a command that lists running processes.
@@ -83,7 +82,6 @@ public class ScriptBase {
 		try {
 			clipboardContent = (String) clipboard.getData(DataFlavor.stringFlavor);
 		} catch (UnsupportedFlavorException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
