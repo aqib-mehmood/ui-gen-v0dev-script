@@ -39,7 +39,7 @@ Before running the script, ensure the following configurations are made:
 ## How to Run
 
 1. Ensure the required Chrome profile and prompt dataset file paths are configured in the respective Java files as mentioned above.
-2. Run the test script using your preferred IDE like Eclipse or via command line:
+2. Run the test script using your preferred IDE like Eclipse or via command line but make sure you have maven installed:
    ```bash
    mvn test
    ```
