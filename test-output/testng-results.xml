@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-02T21:35:26 PKT" name="Default suite" finished-at="2024-10-02T21:36:37 PKT" duration-ms="70428">
+  <suite started-at="2024-10-02T23:02:03 PKT" name="Default suite" finished-at="2024-10-02T23:02:36 PKT" duration-ms="32558">
     <groups>
     </groups>
-    <test started-at="2024-10-02T21:35:26 PKT" name="Default test" finished-at="2024-10-02T21:36:37 PKT" duration-ms="70428">
+    <test started-at="2024-10-02T23:02:03 PKT" name="Default test" finished-at="2024-10-02T23:02:36 PKT" duration-ms="32558">
       <class name="qa.test.ChatTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:qa.test.ChatTest@8519cb4]" started-at="2024-10-02T21:35:26 PKT" name="setUp" finished-at="2024-10-02T21:35:37 PKT" duration-ms="10191" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:qa.test.ChatTest@8519cb4]" started-at="2024-10-02T23:02:03 PKT" name="setUp" finished-at="2024-10-02T23:02:08 PKT" duration-ms="5096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test()[pri:0, instance:qa.test.ChatTest@8519cb4]" started-at="2024-10-02T21:35:37 PKT" name="Test" finished-at="2024-10-02T21:36:37 PKT" duration-ms="60164" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="Test()[pri:0, instance:qa.test.ChatTest@8519cb4]" started-at="2024-10-02T23:02:08 PKT" name="Test" finished-at="2024-10-02T23:02:36 PKT" duration-ms="27415" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[h2[contains(text(), 'Application error')]]"}
+              <![CDATA[target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
   (Session info: chrome=129.0.6668.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b8afd9fdf21bfbfdfb2c75e6e361bb56, findElement {using=xpath, value=//div[h2[contains(text(), 'Application error')]]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\AK Technology\AppD...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53733}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53733/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8afd9fdf21bfbfdfb2c75e6e361bb56]]>
+Command: [148ca99846534becbc80271e03010d04, findElement {using=xpath, value=//span[text()='Retry']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\AK Technology\AppD...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56963/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 148ca99846534becbc80271e03010d04]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[h2[contains(text(), 'Application error')]]"}
+              <![CDATA[org.openqa.selenium.WebDriverException: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
   (Session info: chrome=129.0.6668.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b8afd9fdf21bfbfdfb2c75e6e361bb56, findElement {using=xpath, value=//div[h2[contains(text(), 'Application error')]]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\AK Technology\AppD...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53733}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53733/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8afd9fdf21bfbfdfb2c75e6e361bb56
+Command: [148ca99846534becbc80271e03010d04, findElement {using=xpath, value=//span[text()='Retry']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.71, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\AK Technology\AppD...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56963/devtoo..., se:cdpVersion: 129.0.6668.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 148ca99846534becbc80271e03010d04
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -48,7 +48,10 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at qa.test.ChatTest.Test(ChatTest.java:72)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at qa.test.ChatTest.Test(ChatTest.java:101)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -77,7 +80,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test -->

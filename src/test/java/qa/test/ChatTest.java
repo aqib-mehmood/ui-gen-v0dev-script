@@ -5,10 +5,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -72,6 +75,12 @@ public class ChatTest extends ScriptBase {
 				// checking if error occurred then reload the page
 				try {
 					// checking if error occurred then reload the page
+
+					// Wait till the visibility of the error element
+					WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(15));
+					wait1.until(ExpectedConditions
+							.visibilityOfElementLocated(By.xpath("//div[h2[contains(text(), 'Application error')]]")));
+
 					WebElement error_msg = driver
 							.findElement(By.xpath("//div[h2[contains(text(), 'Application error')]]"));
 					if (error_msg.isDisplayed()) {
@@ -84,18 +93,21 @@ public class ChatTest extends ScriptBase {
 				} catch (Exception e) {
 					// TODO: handle exception
 				}
-				
-				
+
 				// validate the page title;
 				softassert.assertEquals("v0 by Vercel", driver.getTitle());
 				System.out.println("Checking the title of the page");
 
 				// Step#03 - Enter the current lineContent and wait for UI generation output
 				driver.findElement(By.id("chat-main-textarea")).sendKeys(lineContent + Keys.RETURN);
-				System.out.println("Waiting for the result for 40 seconds");
+				System.out.println("Waiting for the result");
 
-				// Wait for 60 seconds after pressing Enter
-				Thread.sleep(40000); // 40 seconds in milliseconds
+				// Wait till the visibility of the span element
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Retry']")));
+				System.out.println("Output: Now span element visible");
+
+				Thread.sleep(2000); // 2 seconds in milliseconds
 
 				// -----------Output - Start------------//
 
@@ -115,6 +127,12 @@ public class ChatTest extends ScriptBase {
 				// checking if error occurred then reload the page
 				try {
 					// checking if error occurred then reload the page
+
+					// Wait till the visibility of the error element
+					WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(15));
+					wait1.until(ExpectedConditions
+							.visibilityOfElementLocated(By.xpath("//div[h2[contains(text(), 'Application error')]]")));
+
 					WebElement error_msg = driver
 							.findElement(By.xpath("//div[h2[contains(text(), 'Application error')]]"));
 					if (error_msg.isDisplayed()) {
