@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class ScriptBase {
 	public static WebDriver driver;
 	public static long PAGE_LOAD_TIMEOUT = 30;
-	public static long IMPLICIT_WAIT = 60;
+	public static long IMPLICIT_WAIT = 30;
 
 	@SuppressWarnings("deprecation")
 	public void initialization() throws InterruptedException {
@@ -67,14 +67,14 @@ public class ScriptBase {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
 
 		// getting the URL of Application under test
-		driver.get("https://v0.dev/");
+		driver.get("https://v0.dev/chat");
 
 	}
 
 	public void copyCodeToFile(File folder, String fileName) throws IOException {
 		// copy the code
-		driver.findElement(By.xpath("//*[text()='Copy Code']")).click();
-		System.out.println("Clicked the button Copy Code");
+		driver.findElement(By.xpath("//button[@aria-label='Copy']")).click();
+		System.out.println("Output: Clicked the Copy button");
 
 		// Get clipboard content
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();

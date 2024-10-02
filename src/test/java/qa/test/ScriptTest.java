@@ -42,7 +42,7 @@ public class ScriptTest extends ScriptBase {
 			List<String> lines = Files.readAllLines(Paths.get(inputFilePath));
 
 			// Loop through each line and its index
-			for (int i = 0; i < lines.size(); i++) {
+			for (int i = 29; i < lines.size(); i++) {
 				// Get the current line (text content)
 				String lineContent = lines.get(i);
 
