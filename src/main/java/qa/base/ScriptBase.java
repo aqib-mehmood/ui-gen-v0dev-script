@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class ScriptBase {
 	public static WebDriver driver;
 	public static long PAGE_LOAD_TIMEOUT = 30;
-	public static long IMPLICIT_WAIT = 30;
+	public static long IMPLICIT_WAIT = 20;
 
 	@SuppressWarnings("deprecation")
 	public void initialization() throws InterruptedException {
